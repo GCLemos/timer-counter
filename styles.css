@@ -167,10 +167,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
 }
 
-.app__footer {
-
-}
-
 .rodape {
     color: var(--color-secondary);
     font-size: 1.5rem;

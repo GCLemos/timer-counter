@@ -110,6 +110,8 @@ function reset() {
   tempoDecorridoEmSegundos = tempoDescansoCurto
   mostrarTempo()
   contador = 1
+  iniciarOuPausarBtn.textContent = 'Começar'
+  icone.setAttribute('src', `/imagens/play_arrow.png`)
   return contadorNaTela.innerHTML = `Série: ${contador}`
 }
 
@@ -136,9 +138,10 @@ function contarSeries () {
 }
 
 
-tempoDescansoCurto = pedirTempo()
-tempoDecorridoEmSegundos = tempoDescansoCurto
+
 mostrarTempo()
 contarSeries()
 
 
+tempoDescansoCurto = pedirTempo()
+tempoDecorridoEmSegundos = tempoDescansoCurto
