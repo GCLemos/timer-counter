@@ -73,10 +73,10 @@ const contagemRegressiva = () => {
   if(tempoDecorridoEmSegundos < 1){
     audioTempoFinalizado.play()
     tempoDecorridoEmSegundos = tempoDescansoCurto
-    alert('Acabou!')
     contador += 1
     contarSeries()
     mostrarTempo()
+    alert('Acabou!')
     zerar()
     iniciarOuPausarBtn.textContent = 'Começar'
     icone.setAttribute('src', `/imagens/play_arrow.png`)
