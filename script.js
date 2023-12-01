@@ -137,11 +137,8 @@ function contarSeries () {
   contadorNaTela.innerHTML = `Série: ${contador}`
 }
 
-
-
+tempoDescansoCurto = pedirTempo()
+tempoDecorridoEmSegundos = tempoDescansoCurto
 mostrarTempo()
 contarSeries()
 
-
-tempoDescansoCurto = pedirTempo()
-tempoDecorridoEmSegundos = tempoDescansoCurto
