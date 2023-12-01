@@ -44,6 +44,7 @@ musicaFocoInput.addEventListener('change', () => {
 
 })
 
+
 curtoBtn.addEventListener('click', () => {
   tempoDescansoCurto = pedirTempo()
   tempoDecorridoEmSegundos = tempoDescansoCurto
@@ -69,15 +70,18 @@ function alterarContexto (contexto) {
 }
 
 const contagemRegressiva = () => {
-  if(tempoDecorridoEmSegundos < 0){
-    // audioTempoFinalizado.play()
+  if(tempoDecorridoEmSegundos < 1){
+    audioTempoFinalizado.play()
     alert('Acabou!')
     tempoDecorridoEmSegundos = tempoDescansoCurto
     contador += 1
     contarSeries()
+    mostrarTempo()
+    zerar()
+    iniciarOuPausarBtn.textContent = 'Começar'
+    icone.setAttribute('src', `/imagens/play_arrow.png`)
     return
   }
-
   tempoDecorridoEmSegundos -= 1
   mostrarTempo()
 }
@@ -117,7 +121,7 @@ function zerar() {
 
 
 function pedirTempo () {
-  let tempo = prompt('Digite o tempo em minutos')
+  let tempo = prompt('Digite o tempo de descanso em minutos')
   return tempo*60
 }
 
@@ -131,7 +135,6 @@ function contarSeries () {
   contadorNaTela.innerHTML = `Série: ${contador}`
 }
 
-let i = 0
 
 tempoDescansoCurto = pedirTempo()
 tempoDecorridoEmSegundos = tempoDescansoCurto
